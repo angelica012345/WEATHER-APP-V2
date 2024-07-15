@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Cambiar clave
+{% endblock %}
+
+{% block nombre %}
+{{ g.user_name }}
+{% endblock %}
+
+{% block icono %}
+<link rel="icon" type="image/x-icon" href="{{url_for('static', filename='seguridad.ico')}}">
+{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Clave</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        input[type="password"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #9ee2ad;
+            color: #0e0b0b;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #9ee2ad;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Cambiar Clave</h2>
+        <form action="/cambiar_clave" method="post">
+            <label for="current-password">Clave actual</label>
+            <input type="password" id="current-password" name="current-password" required>
+            
+            <label for="new-password">Nueva clave</label>
+            <input type="password" id="new-password" name="new-password" required>
+            
+            <label for="confirm-password">Confirmar nueva clave</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+            
+            <input type="submit" value="Cambiar Clave">
+        </form>
+    </div>
+</body>
+</html>
+{% endblock %}

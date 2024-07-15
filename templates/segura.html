@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Weather_App V2
+{% endblock %}
+
+{% block nombre %}
+{{ g.user_name }}
+{% endblock %}
+
+{% block content %}
+<p>Muy seguro</p>
+{% endblock %}
+
+{% block icono %}
+<link rel="icon" type="image/x-icon" href="{{url_for('static', filename='seguro.ico')}}">
+{% endblock %}

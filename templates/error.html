@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='error.ico')}}">
+        <title>Error</title>
+        <style>
+            .contenedor{
+                      display: flex;
+                      flex-direction: column;
+                      margin: 6%;
+                      justify-content: center;
+                      align-items: center; 
+            }
+          </style> 
+    </head>
+    <body>
+        <div class="contenedor">
+            <center>
+                <h1>OOPS!...ERROR 404</h1>
+                <h2>Página no encontrada...</h2>
+                <img height="300" width="350" src="{{url_for('static', filename='cohete.gif')}}" alt="cohete">
+                <h2>¡Parece que tu cohete se ha estrellado!</h2>
+                
+
+            </center>
+        </div>
+    </body>
+</html>

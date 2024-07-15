@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{super() }} - Home
+{% endblock %}
+
+{% block content %}
+<p>Hola como estas</p>
+{% endblock %}
+
+{% block icono %}
+<link rel="icon" type="image/x-icon" href="{{url_for('static', filename='home.ico')}}">
+{% endblock %}
